@@ -12,8 +12,8 @@ Running It
 
 docker run --name zeppelin \
        -p 0.0.0.0:8080:8080 \
-       -v ./data:/data \
-       -v ./notebook:/zeppelin-0.5.6-incubating-bin-all/notebook \
+       -v /data:./data \
+       -v /zeppelin-0.5.6-incubating-bin-all/notebook:./notebook \
        -d docker-zeppelin
 ```
 
