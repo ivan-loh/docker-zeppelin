@@ -16,3 +16,6 @@ docker run --name zeppelin \
        -v ./notebook:/zeppelin-0.5.6-incubating-bin-all/notebook \
        -d docker-zeppelin
 ```
+
+TODO:
+- timezones ?
