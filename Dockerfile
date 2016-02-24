@@ -13,16 +13,19 @@ RUN apt-get install -y oracle-java8-installer maven nodejs
 
 
 # Get Zeppelin
-RUN curl -O http://www.eu.apache.org/dist/incubator/zeppelin/0.5.6-incubating/zeppelin-0.5.6-incubating-bin-all.tgz && \
-    tar xvzf zeppelin-0.5.6-incubating-bin-all.tgz -C /
+RUN curl -O http://www.us.apache.org/dist/incubator/zeppelin/0.5.6-incubating/zeppelin-0.5.6-incubating-bin-all.tgz
+RUN tar xvzf zeppelin-0.5.6-incubating-bin-all.tgz -C /
+RUN mv /zeppelin-0.5.6-incubating-bin-all/ /zeppelin
+RUN rm zeppelin-0.5.6-incubating-bin-all.tgz
+
 
 # Expose Some Directories
 RUN mkdir /data
 VOLUME /data
-VOLUME /zeppelin-0.5.6-incubating-bin-all/notebook
+VOLUME /zeppelin/notebook
 
 
-WORKDIR /zeppelin-0.5.6-incubating-bin-all
+WORKDIR /zeppelin
 
 EXPOSE 8080
 
