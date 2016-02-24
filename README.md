@@ -1,4 +1,5 @@
 # docker-zeppelin setup
+created from ubuntu 14.04.4 & zeppelin-0.5.6
 
 Building It.
 ```
